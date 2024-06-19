@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import { axiosSecure } from "../hook/useAxiosSecure";
 import useRole from "../hook/useRole";
 import { GrUserAdmin } from "react-icons/gr";
-
+import MyImageSvg from '../assets/icons8-airplane-take-off.gif';
 const Navbar = () => {
   const [role, isLoading] = useRole()
   // const axiosSecure = useAxiosSecure()
@@ -87,11 +87,12 @@ const Navbar = () => {
               </div>
             </ul>
           </div >
-
-          <div className=" text-2xl font-bold text-stone-500 ml-4 bg-cover">ART  <span className=" text-2xl font-bold text-purple-500 shadow-2xl shadow-purple-400 rounded-full "  >&</span> CRAFT  </div>
+          <img src={MyImageSvg} alt="My Image Svg" className="" />
+          <div className=" text-2xl font-bold text-stone-500 bg-cover">Ujan <span className=" text-2xl mr- font-bold text-violet-400 shadow-2xl shadow-violet-400 rounded-full "  > 's</span> Tour </div>
+{/* <img className="h-[30px] object-cover" src="https://i.ibb.co/JBKfXgB/icons8-trekking-16.png" alt="" /> */}
 
         </div>
-        <img className="rounded-full top-2 ml-1  left-44 absolute w-[4%] h-[2%]" src="https://i.ibb.co/rbnwdPV/31530356-bird-2.jpg" alt="" />
+        {/* <img className="rounded-full top-2 ml-1  left-44 absolute w-[4%] h-[2%]" src="https://i.ibb.co/rbnwdPV/31530356-bird-2.jpg" alt="" /> */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <div className="flex space-x-14 text-xl font-bold ">
