@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 
 
 const Contact = () => {
     return (
         <div>
+			<Helmet>
+         <title>Ujan's Tour | contact</title>
+       </Helmet>
             <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-100 dark:text-gray-800">
 	<div className="flex flex-col justify-between">
 		<div className="space-y-2">

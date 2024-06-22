@@ -21,7 +21,8 @@ const CategoryBox = ({ label, icon: Icon }) => {
     navigate(url)
   }
   return (
-    <div
+ <div className=''>
+   <div
       onClick={handleClick}
       className={`flex 
     flex-col 
@@ -34,12 +35,14 @@ const CategoryBox = ({ label, icon: Icon }) => {
    hover:text-neutral-800
     transition
     cursor-pointer  ${
-        tourType === label && 'border-b-neutral-800 bg-purple-200 rounded-xl text-neutral-800'
+        tourType === label && 'border-b-neutral-800 bg-violet-200 rounded-xl text-neutral-800'
     } `}
     >
       <Icon size={26} />
       <div className='text-sm font-medium'>{label}</div>
     </div>
+
+ </div>
   )
 }
 

@@ -9,7 +9,9 @@ import { toast } from "react-toastify";
 import { axiosSecure } from "../hook/useAxiosSecure";
 import useRole from "../hook/useRole";
 import { GrUserAdmin } from "react-icons/gr";
-import MyImageSvg from '../assets/icons8-airplane-take-off.gif';
+import { motion } from "framer-motion"
+// import { Transition } from "@headlessui/react";
+import MyImageSvg from "../assets/icons8-airplane-take-off.gif"
 const Navbar = () => {
   const [role, isLoading] = useRole()
   // const axiosSecure = useAxiosSecure()
@@ -44,6 +46,20 @@ const Navbar = () => {
     }
 
   }
+// const pathVariants ={
+// hidden:{
+//   opacity:0,
+//   pathLength:0
+// },
+// visible:{
+// opacity:1,
+//  pathLength:1,
+//  transition:{
+//   duration:2,
+//   ease:"easeInOut"
+//  }
+// }
+// }
 
 
 
@@ -54,7 +70,7 @@ const Navbar = () => {
 
 
     <NavLink to={'/'} className={({ isActive }) => isActive ? " text-primary font-bold text-xl font-semibold " : "hover:scale-90 text-xl font-semibold hover:text-red-800"}><li>Home</li></NavLink>
-    <NavLink to={'/allitems'} className={({ isActive }) => isActive ? "text-primary font-bold text-xl font-semibold " : "hover:scale-90 text-xl font-semibold hover:text-red-800"}><li>Community</li></NavLink>
+    <NavLink to={'/community'} className={({ isActive }) => isActive ? "text-primary font-bold text-xl font-semibold " : "hover:scale-90 text-xl font-semibold hover:text-red-800"}><li>Community</li></NavLink>
     <NavLink to={'/blogs'} className={({ isActive }) => isActive ? "text-primary font-bold text-xl font-semibold " : "hover:scale-90 text-xl font-semibold hover:text-red-800"}><li id='add'>Blogs</li></NavLink>
 
     <NavLink to={'/contact'} className={({ isActive }) => isActive ? "text-primary  text-xl font-semibold " : "hover:scale-90 text-xl font-semibold hover:text-red-800"}><ReactTooltip
@@ -72,8 +88,8 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
   return (
     <div className="    rounded-b-2xl   shadow-sky-400  mx-auto ">
-      <div className="navbar border max-w-screen-xl  border-t-2 rounded-t-xl mt-3 h-[90px] bg-cover  "
-      //  style={{backgroundImage: 'url(https://i.ibb.co/nnHyJ0F/5570863.jpg)'}} 
+      <div className="navbar shadow-xl border  shadow-teal-200 max-w-screen-xl rounded-b-3xl mt- h-[90px] mx-auto object-cover"
+       style={{backgroundImage: 'url(https://i.ibb.co/tP38w7R/bokeh-1916807-1280.jpg)'}} 
       >
 
         <div className="navbar-start">
@@ -87,8 +103,13 @@ const Navbar = () => {
               </div>
             </ul>
           </div >
-          <img src={MyImageSvg} alt="My Image Svg" className="" />
-          <div className=" text-2xl font-bold text-stone-500 bg-cover">Ujan <span className=" text-2xl mr- font-bold text-violet-400 shadow-2xl shadow-violet-400 rounded-full "  > 's</span> Tour </div>
+     <img src={MyImageSvg} alt="My Image Svg" className="w-[33px] mt-2 rounded-lg " />
+          <Link to={'/'}>
+          <motion.div className=" text-2xl font-bold text-stone-900 bg-cover"   animate={{ x: 10 }}
+  transition={{ type: "spring", stiffness: 100 }}  
+
+           >Ujan<span className="title text-2xl mr- font-bold text-violet-500 shadow-2xl shadow-violet-500 rounded-full">'s</span> Tour </motion.div>
+          </Link>
 {/* <img className="h-[30px] object-cover" src="https://i.ibb.co/JBKfXgB/icons8-trekking-16.png" alt="" /> */}
 
         </div>
@@ -143,9 +164,9 @@ const Navbar = () => {
             </ul>
 
           </div> :
-            <div className="dropdown dropdown-end">
+            <div className="dropdown dropdown-end border-4 rounded-xl" >
               <div className="">
-                <div className="rounded-md w-[89px] bg-purple-300">
+                <div className="rounded-md w-[89px] bg-teal-400">
                   <Link to={'login'} id='login' className="btn btn-outline w-full text-black-500 ">Login</Link >
                   <ReactTooltip
                     className='mr-14 p-2'

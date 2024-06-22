@@ -7,7 +7,6 @@ import Cards from './Cards'
 import Heading from '../../../Shared/Heading'
 import LoadingSpinner from '../../../Shared/LoadingSpinner'
 import Container from '../../../Shared/Container'
-
 // import Heading from '../../../Shared/Heading'
 // import LoadingSpinner from '../../../Shared/LoadingSpinner'
 
@@ -32,14 +31,14 @@ const TourType = () => {
    
   })
 
-  if (isLoading) return <LoadingSpinner />
+  if (isLoading) return <LoadingSpinner/>
 // console.log(data)
   return (
     
     <Container>
       
       {packages && packages.length > 0 ? (
-        <div className='pt-12 grid grid-cols-3   sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8'>
+        <div className='pt-12 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  gap-8'>
           {packages.map(item => (
             <Cards key={item._id} item={item} />
           ))}

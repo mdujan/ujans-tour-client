@@ -1,8 +1,8 @@
 import { 
     // FaAd,
-     FaBook, 
+  
     //  FaCalendar,
-      FaEnvelope, FaHome, FaList, FaSearch,  FaUsers,
+      FaEnvelope, FaHome, FaList, FaSearch, 
     //    FaUtensils 
     } from "react-icons/fa";
 
@@ -55,7 +55,7 @@ console.log(user,role,isLoading);
                             My Profile</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/order/contact">
+                        <NavLink to="/contact">
                             <FaEnvelope></FaEnvelope>
                             Contact</NavLink>
                     </li>

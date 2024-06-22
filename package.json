@@ -14,6 +14,7 @@
     "@tanstack/react-query": "^5.40.0",
     "axios": "^1.7.2",
     "firebase": "^10.12.2",
+    "framer-motion": "^11.2.11",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "query-string": "^9.0.0",
@@ -26,12 +27,14 @@
     "react-player": "^2.16.0",
     "react-router-dom": "^6.23.1",
     "react-select": "^5.8.0",
+    "react-share": "^5.1.0",
     "react-spinners": "^0.13.8",
     "react-tabs": "^6.0.2",
     "react-toastify": "^10.0.5",
     "react-tooltip": "^5.26.4",
     "sort-by": "^1.2.0",
-    "sweetalert2": "^11.11.0"
+    "sweetalert2": "^11.11.0",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

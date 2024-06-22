@@ -84,6 +84,9 @@ const handleAccept= item =>{
 
     return (
         <div className="" >
+          <Helmet>
+         <title>Ujan's Tour | My assigned</title>
+       </Helmet>
         {
           bookings?.length?
             <div className="">

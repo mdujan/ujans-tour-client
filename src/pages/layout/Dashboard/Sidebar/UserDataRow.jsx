@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 // import toast from 'react-hot-toast'
 // import useAuth from '../../../hooks/useAuth'
 import {  FaUsers } from "react-icons/fa";
-
+import { RiAdminFill } from "react-icons/ri";
 
 const UserDataRow = ({ user, handleMakeAdmin ,handleMakeTourGuide}) => {
 
@@ -77,24 +77,19 @@ const UserDataRow = ({ user, handleMakeAdmin ,handleMakeTourGuide}) => {
       <button
                                         onClick={() => handleMakeAdmin(user)}
                                         disabled={user.role !=='tourist'}
-                                        className="btn btn-lg bg-orange-500">
-                                        <FaUsers className="text-white 
-                                        text-2xl"></FaUsers>
+                                        className="btn btn-outline text-white bg-gradient-to-r from-[#8ea1d8] to-[#8f087b]">
+                                        <RiAdminFill className='text-xl' />Make Admin
                                     </button>
-
-
-      </td>
-      <td>
-      <button
+                                    <button
                                         onClick={() => handleMakeTourGuide(user)}
                                         disabled={user.role !=='tourist'}
-                                        className="btn btn-lg bg-orange-500">
-                                        <FaUsers className="text-white 
+                                        className="btn btn-md ml-4 text-black  bg-gradient-to-r from-[#dbbf71] to-[#2aa4ad]">
+                                        <FaUsers className="
                                         text-2xl"></FaUsers>
-                                    </button>
-
+                                   Make TourGuide </button>
 
       </td>
+  
       
 
       {/* <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>

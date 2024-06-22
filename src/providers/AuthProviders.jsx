@@ -56,7 +56,7 @@ const saveUser = async user =>{
         status:'verified',
     }
 
-    const {data} =await axios.put('http://localhost:5000/user',currentUser)
+    const {data} =await axios.put(`${import.meta.env.VITE_API_URL}/user`,currentUser)
     return data
 }
 

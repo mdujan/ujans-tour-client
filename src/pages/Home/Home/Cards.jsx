@@ -62,21 +62,21 @@ const Cards = ({ item }) => {
 
     return (
         <div className="relative w-[320px] ">
-            <Link to={`/details/${_id}`} className="">
+            <Link to={`/details/${_id}`} className="  ">
                 {/* <h2>{tourType}</h2> */}
-                <div className="  overflow-hidden  bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                    <div className="px-4 py-2">
+                <div className="overflow-hidden bg-white rounded-lg  dark:bg-gray-800 shadow-2xl shadow-violet-200">
+                    <div className="px-4 py-2 border-t-4  border-violet-100 ">
                         <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white">{tourType}</h1>
-                        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{tripTitle}</p>
+                        <p className="mt-1 text-sm text-yellow-800   dark:text-gray-400">{tripTitle}</p>
                     </div>
 
                     <div>
-                        <img className="object-cover w-full h-48 mt-2" src={tourImage0} alt="NIKE AIR" />
+                        <img className="object-cover w-full h-48 mt-2 hover:scale-125 transition-transform  " src={tourImage0} alt="NIKE AIR" />
 
                     </div >
                     <div className="flex items-center justify-between px-4 py-2 bg-gray-900 ">
                         <h1 className="text-lg font-bold text-white">$ {price}</h1>
-                        <button className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Add to cart</button>
+                        <button className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform  rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none bg-violet-100">Add to cart</button>
                     </div>
                 </div>
             </Link>

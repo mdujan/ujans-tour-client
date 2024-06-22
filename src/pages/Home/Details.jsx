@@ -1,6 +1,7 @@
 // import DatePicker from "react-datepicker";
 
 // import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 // import useAuth from "../../hook/useAuth";
 // import Swal from "sweetalert2";
@@ -11,9 +12,7 @@ import { Link, useLoaderData } from "react-router-dom";
 const Details = () => {
     // const [startDate, setStartDate] = useState(new Date());
     const packages = useLoaderData();
-    const { tourType,tripTitle,
-        // Tour plan1,Tour plan2,Tour plan0,
-        price,_id,
+    const { tourType,tripTitle,tourPlan1,tourPlan2,price,_id,
         tourImage0,tourImage1,tourImage2,tourImage3,
         // tourImage1,tourImage2,tourImage3,
         tourSection,tourPlan0
@@ -75,18 +74,21 @@ const Details = () => {
 
     return (
         <div>
-            <h1 className="mt-10 mb-6 mx-auto w-[19%] font-bold text-4xl ">Service Dteails</h1>
+          <Helmet>
+         <title>Ujan's Tour | details</title>
+       </Helmet>
+            <h1 className=" my-16 mx-auto w-[19%] font-bold text-4xl ">Service Dteails</h1>
             <hr className="bg-black w-[29%] mx-auto " />
             <div data-aos="fade-right"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine">
                 <div className="w-[100%] mt-1 mx-auto ">
                     <div className=" card lg:card-side shadow-xl bg-stone-300">
-                        <div className="grid grid-cols-2 col-span-1 rounded-xl  bg-gray-100 mr-2 w-full  m-1 shadow-purple-400  shadow-2xl">  
-                        <img className="rounded-sm h-350px  w-200px" src={tourImage0}  alt="Album" />
-                        <img className="rounded-sm h-350px w-200px" src={tourImage1}  alt="Album" />
-                        <img className="rounded-sm h-350px w-200px" src={tourImage2}  alt="Album" />
-                        <img className="rounded-sm h-350px w-200px" src={tourImage3}  alt="Album" />
+                        <div className="lg:grid lg:grid-cols-2 border-8 lg:row-span-1 rounded-xl  bg-gray-100 mr-2 w-full  m-1 shadow-purple-400  shadow-2xl">  
+                        <img className="rounded-sm h-full border-4 hover:scale-110 transition-transform translate-2 border-violet-200  w-200px" src={tourImage0}  alt="Album" />
+                        <img className="rounded-sm h-full border-4 hover:scale-110 transition-transform translate-2 border-violet-200 w-200px" src={tourImage1}  alt="Album" />
+                        <img className="rounded-sm h-full border-4 hover:scale-110 transition-transform translate-2 border-violet-200 w-200px" src={tourImage2}  alt="Album" />
+                        <img className="rounded-sm h-full border-4 hover:scale-110 transition-transform translate-2 border-violet-200 w-200px" src={tourImage3}  alt="Album" />
 
                         </div>
 
@@ -100,17 +102,33 @@ const Details = () => {
 
                             <p className="text-lg"><span className="font-bold mt-0 mr-3">Description : </span><span className="text-stone-600 ">{tourSection}</span></p>
 
-                            <p className="py-1 mt- "><span className="font-extrabold text-center text-xl w-[4%]  mx-auto text-amber-600">Provider Info :-</span>
+                            <p className="py-1 mt- "><span className="font-extrabold text-center text-xl w-[4%]  mx-auto text-amber-600">Daily Plan Scedule :-</span>
                             </p>
 
 <div>
 
-<div tabIndex={0} className="collapse bg-purple-300 text-primary-content focus:bg-purple-600 focus:text-secondary-content">
+<div tabIndex={0} className="collapse bg-purple-800 text-primary-content focus:bg-slate-700 focus:text-secondary-content">
   <div className="collapse-title text-blaxk font-semibold">
-   day 1
+   day 1:
   </div>
   <div className="collapse-content"> 
     <p>{tourPlan0}</p>
+  </div>
+</div>
+<div tabIndex={0} className="mt-3 collapse bg-violet-600 text-primary-content focus:bg-slate-700 focus:text-secondary-content">
+  <div className="collapse-title text-blaxk font-semibold">
+   day 2:
+  </div>
+  <div className="collapse-content"> 
+    <p>{tourPlan1}</p>
+  </div>
+</div>
+<div tabIndex={0} className="mt-3 collapse bg-zinc-500 text-primary-content focus:bg-slate-700 focus:text-secondary-content">
+  <div className="collapse-title text-blaxk font-semibold">
+   day 3:
+  </div>
+  <div className="collapse-content"> 
+    <p>{tourPlan2}</p>
   </div>
 </div>
 

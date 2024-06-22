@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
     return (
         <div>
+            <Helmet>
+         <title>Ujan's Tour | Blogs</title>
+       </Helmet>
         <div className="dark:bg-gray-100 dark:text-gray-900">
         <div className="container grid grid-cols-12 mx-auto">
             <div className="flex flex-col justify-center col-span-12 align-middle dark:bg-gray-300 bg-no-repeat bg-cover lg:col-span-6 lg:h-auto"   style={{backgroundImage: 'url(https://i.ibb.co/0tWBkzc/2150497265.jpg)'}}>

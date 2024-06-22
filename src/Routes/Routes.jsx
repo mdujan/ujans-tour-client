@@ -22,6 +22,11 @@ import Wishlist from "../pages/layout/Dashboard/Sidebar/Tourist/Wishlist.jsx";
 import Blogs from "../pages/Blogs/Blogs.jsx";
 import ErrorElement from "../pages/Error/ErrorElement.jsx";
 import Contact from "../pages/ContactUs/Contact.jsx";
+import AdminRoute from "../pages/AdminRoute/AdminRoute.jsx";
+import AddPackages from "../pages/layout/Dashboard/Sidebar/Admin/AddPackages.jsx";
+import Community from "../pages/Community/Community.jsx";
+
+// import Admin from "../pages/layout/Dashboard/Sidebar/Admin/Admin.jsx";
 // import Wishlist from "../pages/layout/Dashboard/Sidebar/Tourist/Wishlist.jsx";
 // import Menu from "../pages/Menu/Menu/Menu";
 // import Order from "../pages/Order/Order/Order";
@@ -50,6 +55,10 @@ import Contact from "../pages/ContactUs/Contact.jsx";
         {
             path: '/',
             element: <Home></Home>
+        }, 
+        {
+            path: '/community',
+            element: <Community></Community>
         }, 
         {
             path: '/blogs',
@@ -100,7 +109,11 @@ import Contact from "../pages/ContactUs/Contact.jsx";
         },
         {
           path: '/dashboard/manageUser',
-          element: <ManageUser/>
+          element: <PrivateRoute><AdminRoute><ManageUser/></AdminRoute></PrivateRoute>
+        },
+        {
+          path: '/dashboard/addPackage',
+          element: <PrivateRoute><AdminRoute><AddPackages></AddPackages> </AdminRoute></PrivateRoute>
         },
         // {
         //   path: '/dashboard/wishlist',
@@ -108,15 +121,15 @@ import Contact from "../pages/ContactUs/Contact.jsx";
         // },
         {
           path: '/dashboard/myBook',
-          element: <MyBook></MyBook>
+          element: <PrivateRoute><MyBook></MyBook></PrivateRoute>
         },
         {
           path: '/dashboard/mywishlist',
-          element: <Wishlist></Wishlist>
+          element: <PrivateRoute><Wishlist></Wishlist></PrivateRoute>
         },
         {
           path: '/dashboard/myAssign',
-          element: <MyAssignedTours></MyAssignedTours> 
+          element: <PrivateRoute><MyAssignedTours></MyAssignedTours></PrivateRoute>
         },
          
 

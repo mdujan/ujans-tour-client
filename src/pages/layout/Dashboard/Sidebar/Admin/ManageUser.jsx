@@ -65,8 +65,9 @@ const ManageUser = () => {
        <Helmet>
          <title>Manage Users</title>
        </Helmet>
-       <div className='py-8 bg-purple-100'>
-         <div className='-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 bg-red-200 rounded-full m-5 overflow-x-auto'>
+       <div className='py-8 rounded-3xl w-[100%] ' style={{backgroundImage: 'url(https://i.ibb.co/0VDZWJn/1798.jpg)'}}>
+       <h1 className="text-center text-[#4c4091] text-2xl font-semibold border-b-2" >Manage User</h1>
+         <div className='-mx-4 sm:-mx-8 px-4 sm:px-8 py-4  bg-gradient-to-r from-[#3b408d] to-[#f3caed] rounded-full m-5 overflow-x-auto'> 
            <div className='inline-block min-w-full shadow rounded-lg overflow-hidden'>
              <table className='min-w-full leading-normal   m-7'>
                <thead>
@@ -92,9 +93,10 @@ const ManageUser = () => {
 
                    <th
                      scope='col'
-                     className='px-5 py-3 bg-white  border-b border-gray-200 text-stone-700 font-bold  text-left text-sm uppercase ' >
+                     className='px-32 py-3 bg-white  border-b border-gray-200 text-stone-700 font-bold  text-left text-sm uppercase ' >
                      Action
                    </th>
+             
                  </tr>
                </thead>
                <tbody>
